@@ -1,5 +1,4 @@
-# Server-2026
-Minecraft
+# Minecraft Java Server for version 1.20.1
 
 **Структуры и исследование**
 - Blue Skies (новые измерения, уникальные боссы, данжи и собственная система прогрессии)
