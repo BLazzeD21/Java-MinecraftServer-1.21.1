@@ -210,5 +210,3 @@ minecraft-server/
 * All mods must be compatible with Minecraft 1.20.1 and Forge 47.x.
 * If the server fails to start, verify the Java version and check mod compatibility.
 
-This version is suitable for GitHub, GitLab, or a private project repository.
-
