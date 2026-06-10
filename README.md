@@ -1,4 +1,145 @@
-# Minecraft Java Server for version 1.20.1
+# Minecraft Forge 1.20.1 Server Setup (Ubuntu)
+
+## Requirements
+
+* Ubuntu Server or Ubuntu Desktop
+* Java 17
+* `forge-1.20.1-47.4.20-installer.jar`
+
+## Install Java
+
+Update package lists and install Java 17:
+
+```bash
+sudo apt update
+sudo apt install -y openjdk-17-jre-headless
+```
+
+Verify the installation:
+
+```bash
+java -version
+```
+
+The output should show Java 17.
+
+## Create the Server Directory
+
+Create a directory for the server and move into it:
+
+```bash
+mkdir -p ~/minecraft-server
+cd ~/minecraft-server
+```
+
+Place `forge-1.20.1-47.4.20-installer.jar` in this directory.
+
+## Install the Forge Server
+
+Run the installer:
+
+```bash
+java -jar forge-1.20.1-47.4.20-installer.jar --installServer
+```
+
+This will download and install all required server files.
+
+## Accept the Minecraft EULA
+
+Open the EULA file:
+
+```bash
+nano eula.txt
+```
+
+Change:
+
+```text
+eula=false
+```
+
+to:
+
+```text
+eula=true
+```
+
+Save and close the file.
+
+## First Server Start
+
+Start the server:
+
+```bash
+bash run.sh
+```
+
+After the server finishes loading, stop it using:
+
+```text
+stop
+```
+
+## Installing Mods
+
+Copy all server-side mods into the following directory:
+
+```text
+mods/
+```
+
+If your modpack includes additional configuration files, copy:
+
+```text
+config/
+defaultconfigs/
+```
+
+into the server directory as well.
+
+## Starting the Server
+
+Launch the server:
+
+```bash
+bash run.sh
+```
+
+## Useful Commands
+
+Check memory usage:
+
+```bash
+free -h
+```
+
+View running Java processes:
+
+```bash
+ps aux | grep java
+```
+
+Stop the server from the console:
+
+```text
+stop
+```
+
+## Server Directory Structure
+
+```text
+minecraft-server/
+├── mods/
+├── config/
+├── defaultconfigs/
+├── world/
+├── eula.txt
+├── server.properties
+├── run.sh
+└── libraries/
+```
+
+## Mods
 
 **Структуры и исследование**
 - Blue Skies (новые измерения, уникальные боссы, данжи и собственная система прогрессии)
@@ -106,5 +247,11 @@
 - FastWorkbench (оптимизация системы крафта и снижение нагрузки от верстаков)
 - FastFurnace (оптимизация работы печей и плавильных процессов)
 
+## Notes
 
+* Forge 47.4.20 requires Java 17.
+* All mods must be compatible with Minecraft 1.20.1 and Forge 47.x.
+* If the server fails to start, verify the Java version and check mod compatibility.
+
+This version is suitable for GitHub, GitLab, or a private project repository.
 
