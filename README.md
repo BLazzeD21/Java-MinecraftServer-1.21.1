@@ -361,6 +361,7 @@ sable-neoforge-1.21.1-1.2.2
 
 ```bash
 JAVA_ARGS="-Xms10G -Xmx10G \
+-XX:+UnlockExperimentalVMOptions \
 -XX:+UseG1GC \
 -XX:+ParallelRefProcEnabled \
 -XX:MaxGCPauseMillis=150 \
