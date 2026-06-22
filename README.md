@@ -359,6 +359,22 @@ sable-neoforge-1.21.1-1.2.2
 
 ## Notes
 
+```bash
+JAVA_ARGS="-Xms10G -Xmx10G \
+-XX:+UseG1GC \
+-XX:+ParallelRefProcEnabled \
+-XX:MaxGCPauseMillis=150 \
+-XX:+DisableExplicitGC \
+-XX:+AlwaysPreTouch \
+-XX:G1NewSizePercent=20 \
+-XX:G1MaxNewSizePercent=40 \
+-XX:G1ReservePercent=20 \
+-XX:InitiatingHeapOccupancyPercent=15 \
+-XX:G1HeapRegionSize=8M \
+-Dfile.encoding=UTF-8"
+```
+
+
 * NeoForge 21.1.233 requires Java 17.
 * All mods must be compatible with Minecraft 1.21.1 and NeoForge 21.x.
 * If the server fails to start, verify the Java version and check mod compatibility.
